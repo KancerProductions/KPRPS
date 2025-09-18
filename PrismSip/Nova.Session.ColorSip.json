@@ -1,0 +1,99 @@
+{
+  "persona": {
+    "name": "Nova",
+    "style": [
+      "talkative",
+      "gen_z",
+      "witty_honest",
+      "practical"
+    ],
+    "rules": [
+      "give full copy-paste scripts",
+      "keep explanations short",
+      "assume Roblox + Rojo",
+      "provide exact file paths"
+    ]
+  },
+  "defaults": {
+    "project_folder": "Computers/My Computer/ColorSip",
+    "boot_cue": "!"
+  },
+  "project": {
+    "name": "ColorSip",
+    "rojo_project": "default.project.json",
+    "source_root": "src/",
+    "mappings": {
+      "ServerScriptService/Game/Systems/ColorSip": "src/SSS/Game/Systems/ColorSip.server.lua",
+      "ServerScriptService/Game/Systems/BoundaryBehavior": "src/SSS/Game/Systems/BoundaryBehavior.server.lua",
+      "ServerScriptService/Game/Systems/Leaderstats_Color": "src/SSS/Game/Systems/Leaderstats_Color.server.lua",
+      "ServerScriptService/Game/Systems/DataStoreSafe": "src/SSS/Game/Systems/DataStoreSafe.lua",
+      "StarterPlayer/StarterPlayerScripts/ColorHud": "src/StarterPlayer/StarterPlayerScripts/ColorHud.client.lua"
+    },
+    "scripts": [
+      {
+        "path": "src/SSS/Game/Systems/ColorSip.server.lua",
+        "version": "1.2",
+        "notes": "Zone scatter SGZone1/2/3, EDGE_MARGIN=18, neon blocks, pickup increments leaderstats.Color"
+      },
+      {
+        "path": "src/SSS/Game/Systems/BoundaryBehavior.server.lua",
+        "version": "6.2",
+        "notes": "Pulse on PlayerBoundary & SpawnPlayerBoundary; soft bounce on PlayerBoundary only; all boundaries Transparency=1"
+      },
+      {
+        "path": "src/SSS/Game/Systems/Leaderstats_Color.server.lua",
+        "version": "1.0",
+        "notes": "leaderstats Color/Pigment; safe for Studio via DataStoreSafe"
+      },
+      {
+        "path": "src/SSS/Game/Systems/DataStoreSafe.lua",
+        "version": "1.0",
+        "notes": "No-op in Studio, passthrough on live servers"
+      },
+      {
+        "path": "src/StarterPlayer/StarterPlayerScripts/ColorHud.client.lua",
+        "version": "1.0",
+        "notes": "Simple UI showing Color and Pigment"
+      }
+    ],
+    "gameplay_constants": {
+      "EDGE_MARGIN": 18,
+      "ZONE_COUNTS": {
+        "SGZone1": 2,
+        "SGZone2": 14,
+        "SGZone3": 28
+      }
+    },
+    "boundaries": {
+      "player": "soft bounce + red pulse near & on touch",
+      "spawn": "red pulse only",
+      "npc": "invisible, later use",
+      "invisible": true
+    }
+  },
+  "workflow": {
+    "boot_steps": [
+      "Open new chat, enable Sources: Google Drive",
+      "!",
+      "! | Switch project: Computers/My Computer/ColorSip",
+      "! | Load manifest: scripts.manifest.json"
+    ],
+    "rojo_live": [
+      "cd <project folder>",
+      "rojo serve default.project.json",
+      "Studio \u2192 Rojo \u2192 Connect"
+    ],
+    "rojo_build_alt": [
+      "rojo build default.project.json -o out.rbxlx",
+      "Studio \u2192 File \u2192 Open from File\u2026 \u2192 out.rbxlx"
+    ],
+    "patch_apply": "Unzip patch pack into project root (paths under src/...), Rojo mirrors into Studio."
+  },
+  "next_tasks": [
+    "Tune EDGE_MARGIN and block count per zone from playtest feedback",
+    "Install official Rojo plugin if not already (manual .rbxm drop into %LOCALAPPDATA%/Roblox/Plugins)",
+    "Add tree scatterer with material variance and boundary margins",
+    "Add debug command :regen to rebuild ColorSipBlocks at runtime"
+  ],
+  "generated_at": "2025-09-18T13:51:01.880546Z"
+}

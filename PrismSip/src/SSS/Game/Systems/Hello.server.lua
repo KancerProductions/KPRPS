@@ -1,0 +1,1 @@
+print("Nova + Rojo online 🚀")

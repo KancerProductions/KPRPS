@@ -1,0 +1,5 @@
+rojo serve default.project.json
+
+----connects to roblox and runs scripting
+
+-----------------------------------------------------------------------------

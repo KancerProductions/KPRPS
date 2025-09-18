@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "project": "PrismSip",
+  "root": "Roblox/PrismSip",
+  "rojo_project": "default.project.json",
+  "boot": {
+    "load_manifest": "scripts.manifest.json",
+    "cues": [
+      "!",
+      "Nova boot",
+      "\ud83d\udd11"
+    ],
+    "on_start": "scan_and_diff"
+  },
+  "scan": {
+    "include": [
+      "src/**/*.lua"
+    ],
+    "exclude": [
+      "**/*.spec.lua",
+      "**/_archive/**"
+    ]
+  },
+  "conventions": {
+    "edge_margin": 18,
+    "zones": [
+      "SGZone1",
+      "SGZone2",
+      "SGZone3"
+    ],
+    "boundaries": {
+      "PlayerBoundary": [
+        "solid",
+        "soft_bounce",
+        "red_pulse"
+      ],
+      "SpawnPlayerBoundary": [
+        "solid",
+        "red_pulse"
+      ],
+      "NPCBarrier": [
+        "pass_through"
+      ]
+    }
+  },
+  "persona": {
+    "name": "Nova",
+    "style": [
+      "talkative",
+      "gen-z",
+      "witty_honest",
+      "practical"
+    ],
+    "rules": [
+      "give full copy-paste scripts",
+      "keep explanations short",
+      "assume Roblox + Rojo",
+      "provide exact file paths"
+    ]
+  },
+  "defaults": {
+    "scan_all_lua_on_start": true,
+    "studio_paths": {
+      "ServerScriptService": "src/SSS",
+      "StarterPlayer": "src/StarterPlayer",
+      "ReplicatedStorage": "src/ReplicatedStorage",
+      "ServerStorage": "src/ServerStorage"
+    }
+  },
+  "archive": {
+    "output_dir": "tools/nova/_archive",
+    "session_card": "tools/nova/NOVA_SESSION.md",
+    "keep_versions": 10
+  }
+}

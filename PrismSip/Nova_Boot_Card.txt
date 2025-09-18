@@ -1,0 +1,89 @@
+NOVA BOOT CARD — PRISMSIP
+Last updated: 2025-09-18
+
+PROJECT ROOT (Drive web):
+• My Drive/Roblox/PrismSip
+
+REPO ROOT (relative for tools/Rojo):
+• Roblox/PrismSip
+
+----------------------------------------
+FILES THAT MUST EXIST (exact paths)
+----------------------------------------
+• My Drive/Roblox/PrismSip/nova.manifest.json
+• My Drive/Roblox/PrismSip/scripts.manifest.json
+
+• My Drive/Roblox/PrismSip/src/SSS/Game/Systems/DataStoreSafe.server.lua
+• My Drive/Roblox/PrismSip/src/StarterPlayer/StarterPlayerScripts/ColorHud.client.lua
+
+(If a folder doesn’t exist, create it. Ensure these are real files, not Google Docs or Shortcuts.)
+
+----------------------------------------
+BOOT CUES (type any one in chat)
+----------------------------------------
+• !
+• Nova boot
+• 🔑
+
+On boot: load nova.manifest.json → (optional) load scripts.manifest.json → scan src → diff.
+
+----------------------------------------
+ROJO WIRING (one-time per session)
+----------------------------------------
+1) In a terminal at Roblox/PrismSip:
+   rojo serve default.project.json
+2) In Roblox Studio:
+   Plugins → Rojo → Connect (to the running server)
+
+----------------------------------------
+SCAN / RESCAN (no new chat needed)
+----------------------------------------
+• Say: scan drive
+• Or just: !
+
+----------------------------------------
+QUICK TROUBLESHOOTING
+----------------------------------------
+A) Files in “Computers/My Computer” won’t be visible.
+   Move them to: My Drive/Roblox/PrismSip (on Drive web: right-click → Move to…).
+
+B) File types:
+   • Must be real files (.json, .lua). Not Google Docs (blue icon).
+   • Windows: enable View → File name extensions so you don’t get .json.txt by accident.
+
+C) Test ping:
+   • Create a tiny file: My Drive/Roblox/PrismSip/NOVA_PING.txt
+   • Then say: scan drive
+   • If I see it, the path is correct—move the rest.
+
+----------------------------------------
+EXPECTED TREE SNAPSHOT (minimum)
+----------------------------------------
+Roblox/PrismSip/
+  nova.manifest.json
+  scripts.manifest.json
+  default.project.json
+  src/
+    SSS/
+      Game/
+        Systems/
+          DataStoreSafe.server.lua
+          BoundaryBehavior.server.lua
+          ColorSip.server.lua
+          Hello.server.lua
+          Leaderstats_Color.server.lua
+    StarterPlayer/
+      StarterPlayerScripts/
+        ColorHud.client.lua
+
+----------------------------------------
+NEXT ACTION (one thing at a time)
+----------------------------------------
+1) On Drive web, confirm these *exact* two files exist at root:
+   - nova.manifest.json
+   - scripts.manifest.json
+2) Put ONE tiny test file at root:
+   - NOVA_PING.txt
+3) In chat, type: scan drive
+4) I’ll confirm visibility, then we wire in the two scripts (or I’ll paste fresh copies if you want).
+

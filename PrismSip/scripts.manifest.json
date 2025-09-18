@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "project": "PrismSip",
+  "root": "Roblox/PrismSip",
+  "generated_at": "2025-09-18T00:00:00Z",
+
+  "rules": {
+    "include": ["src/**/*.lua"],
+    "exclude": ["**/*.spec.lua", "**/_archive/**"]
+  },
+
+  "studio_paths": {
+    "ServerScriptService": "src/SSS",
+    "StarterPlayer": "src/StarterPlayer",
+    "ReplicatedStorage": "src/ReplicatedStorage",
+    "ServerStorage": "src/ServerStorage"
+  },
+
+  "files": [
+    {
+      "path": "src/SSS/Game/Systems/BoundaryBehavior.server.lua",
+      "studio_target": "ServerScriptService/Game/Systems/BoundaryBehavior",
+      "kind": "server",
+      "sha256": "auto",
+      "exports": [],
+      "notes": ""
+    },
+    {
+      "path": "src/SSS/Game/Systems/ColorSip.server.lua",
+      "studio_target": "ServerScriptService/Game/Systems/ColorSip",
+      "kind": "server",
+      "sha256": "auto",
+      "exports": [],
+      "notes": ""
+    },
+    {
+      "path": "src/SSS/Game/Systems/Hello.server.lua",
+      "studio_target": "ServerScriptService/Game/Systems/Hello",
+      "kind": "server",
+      "sha256": "auto",
+      "exports": [],
+      "notes": ""
+    },
+    {
+      "path": "src/SSS/Game/Systems/Leaderstats_Color.server.lua",
+      "studio_target": "ServerScriptService/Game/Systems/Leaderstats_Color",
+      "kind": "server",
+      "sha256": "auto",
+      "exports": [],
+      "notes": ""
+    },
+
+    {
+      "path": "src/SSS/Game/Systems/DataStoreSafe.server.lua",
+      "studio_target": "ServerScriptService/Game/Systems/DataStoreSafe",
+      "kind": "server",
+      "sha256": "missing",
+      "exports": [],
+      "notes": "Placeholder until we add the script"
+    },
+    {
+      "path": "src/StarterPlayer/StarterPlayerScripts/ColorHud.client.lua",
+      "studio_target": "StarterPlayer/StarterPlayerScripts/ColorHud",
+      "kind": "client",
+      "sha256": "missing",
+      "exports": [],
+      "notes": "Placeholder until we add the script"
+    }
+  ]
+}

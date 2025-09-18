@@ -1,0 +1,5 @@
+-- @Name: <ScriptFileName.lua>
+-- @Scope: ServerScriptService/Game/Systems
+-- @Provides: <what this creates>  (e.g., RemoteEvent[ReplicatedStorage/ColorSipEvents/Pickup,Deposit])
+-- @DependsOn: Map/Boundaries(PlayerBoundaries,SpawnPlayerBoundary*), Map/Grounds(SGZone1..3), Map/Prism
+-- @Version: 1.0

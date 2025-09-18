@@ -1,0 +1,6 @@
+# scripts.manifest.txt
+# Generated 2025-09-18T18:54:10Z
+# One line per file: <path>  sha256=<hash>
+
+src/SSS/Game/Systems/DataStoreSafe.server.lua  sha256=a9902beba39d94658b9d0c478fe5fa558793859d22b530575c2b8d1006407995
+src/StarterPlayer/StarterPlayerScripts/ColorHud.client.lua  sha256=e784e0ed59b5299d7bc078873c6594cf24e600ca66c685c17d5f275a6d85ecc5
